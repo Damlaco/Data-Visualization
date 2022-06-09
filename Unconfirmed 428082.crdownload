@@ -21,7 +21,7 @@ app = dash.Dash()
 app.layout = html.Div(children=[html.H1('Airline Performance Dashboard', 
                                 style={'textAlign':'center', 'color':'#503D36',
                                 'font-size':40 }),
-                                html.Div(["Input: ", dcc.Input(id='input-yr', value='2010', type='number'),], 
+                                html.Div(["Input-yr", dcc.Input(id='input-yr', value='2010', type='number'),], 
                                 style={'height':'50px', 'font-size': 35}),
                                 html.Br(),
                                 html.Br(),
