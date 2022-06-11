@@ -19,8 +19,7 @@ app = dash.Dash()
 # Add a html.Div and core input text component
 # Finally, add graph component.
 app.layout = html.Div(children=[html.H1('Airline Performance Dashboard', 
-                                style={'textAlign':'center', 'color':'#503D36',
-                                'font-size':40 }),
+                                style={'textAlign': 'center', 'color':'#503D36','font-size': 40 }),
                                 html.Div(["Input-yr", dcc.Input(id='input-yr', value='2010', type='number'),], 
                                 style={'height':'50px', 'font-size': 35}),
                                 html.Br(),
@@ -28,8 +27,8 @@ app.layout = html.Div(children=[html.H1('Airline Performance Dashboard',
                                 html.Div(dcc.Graph(id='line-plot')),
                                 ])   
 # add callback decorator
-@app.callback(Output(component_id='input-yr', component_property='figure'),
-               Input(component_id='line-plot',component_property='value'))
+@app.callback(Output(component_id='line-plot', component_property='figure'),
+               Input(component_id='input-yr',component_property='value'))
 
 # Add computation to callback function and return graph
 def get_graph(entered_year):
